@@ -11,12 +11,12 @@ module Alegra
       @setup = Alegra::Setup.new(username, apikey, debug)
     end
 
-    def get(url, params={})
+    def get(url, params = {})
       request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
       request.get(url, params)
     end
 
-    def post(url, params={})
+    def post(url, params = {})
       request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
       request.post(url, params)
     end

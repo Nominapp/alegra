@@ -12,32 +12,30 @@ module Alegra
       client.get("payments/#{id}")
     end
 
-    # Returs all invoices
+    # Returs all payments
     # @return [ Array ]
     def list(params = {})
       client.get('payments', params)
     end
 
-    # Creates a invoice
+    # Creates a payment
     # @param params [ Hash ]
     #   - date [ String ]
-    #   - due_date [ String ]
-    #   - price_list [ Array ]
-    #   - currency [ Array ]
-    #   - payments [ Array ]
+    #   - bank_account [ Integer ] or [ Hash ]
+    #   - payment_method [ String ]
+    #   - observations [ String  ]
+    #   - anotation [ String ]
+    #   - type [ String ]
     #   - client [ Integer ] or [ Hash ]
-    #   - items [ Array ]
-    #   - observations [ Array ]
-    #   - anotations [ Array ]
-    #   - terms_conditions [ Array ]
-    #   - status [ String ]
-    #   - number_template [ String ]
-    #   - retenctions [ Array ]
-    #   - seller [ String ]
+    #   - invoices [ Array ]
+    #   - bills [ Array ]
+    #   - categories [ Array ]
+    #   - retentions [ Array ]
+    #   - currency [ Array ]
     # @return [ Hash ]
     def create(params)
-      _params = params.deep_camel_case_lower_keys
-      client.post('invoices', _params)
+      params = params.deep_camel_case_lower_keys
+      client.post('payments', params)
     end
 
     # Creates a invoice

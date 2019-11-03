@@ -70,7 +70,7 @@ module Alegra
     # @return [ Hash ]
     def send_by_email(id, params)
       _params = params.deep_camel_case_lower_keys
-      client.post("invoices/#{ id }/email", _params)
+      client.post("invoices/#{id}/email", _params)
     end
   end
 end
