@@ -158,6 +158,39 @@ Send that invoice by email:
 params = { emails: ['your.email@alegra.com', 'another.eail@algra.com'], send_copy_to_user: true, invoice_type: 'copy'}
 client.invoices.send_by_email(1, params)
 ```
+
+### Payments
+
+You can get all payments:
+```ruby
+client.payments.list()
+```
+
+Or get a specific payment by id:
+```ruby
+client.payments.find(1) # the parameter is the payment id
+```
+
+Also you are able to create a new payments, as follows:
+```ruby
+params = {
+  date: "2015-12-13",
+  invoices: [
+    {
+      id: 6,
+      amount: 150
+    },
+    {
+      id: 200,
+      amount: 500
+    }
+  ],
+  bank_account: 1
+}
+
+client.payments.create(params)
+```
+
 ## Development
 
 This gem is under construction and I'm writing it with the goal that it will easy to use. However, if you have any recommendation is well received.
@@ -186,4 +219,5 @@ The gem is available as open source under the terms of the [MIT License](http://
 ## Contributors
 
 - Diego Gomez
+- Nicolas Mena
 
