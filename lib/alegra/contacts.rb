@@ -14,8 +14,8 @@ module Alegra
 
     # Returs all contacts
     # @return [ Array ]
-    def list()
-      client.get('contacts')
+    def list(params = {})
+      client.get('contacts', params)
     end
 
     # @param params [ Hash ]
@@ -36,8 +36,8 @@ module Alegra
     #   - internal_contacts [ Array ]
     # @return [ Hash ]
     def create(params)
-      _params = params.deep_camel_case_lower_keys
-      client.post('contacts', _params)
+      params = params.deep_camel_case_lower_keys
+      client.post('contacts', params)
     end
 
     # @param id [ Integer ]

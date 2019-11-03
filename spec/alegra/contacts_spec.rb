@@ -11,21 +11,22 @@ describe Alegra::Contacts do
 
     it 'should get all contacts' do
       VCR.use_cassette('list_of_contacts') do
-        expected_response =[{:id=>"1",
-                              :name=>"cliente",
-                              :identification=>"123456789",
-                              :email=>"cliente@test.com",
-                              :phone_primary=>"",
-                              :phone_secondary=>"",
-                              :fax=>"",
-                              :mobile=>"3004232123",
-                              :observations=>"Este es un usuario de prueba",
-                              :address=>{:address=>"calle 1 # 3-2", :city=>"Medellin"},
-                              :type=>["client", "provider"],
-                              :seller=>nil,
-                              :term=>{:id=>"1", :name=>"De contado", :days=>"0"},
-                              :price_list=>{:id=>"1", :name=>"General"},
-                              :internal_contacts=>[]}]
+        expected_response =[{ id: '1',
+                              name: 'cliente',
+                              identification: '123456789',
+                              email: 'cliente@test.com',
+                              phone_primary: '',
+                              phone_secondary: '',
+                              fax: '',
+                              mobile: '3004232123',
+                              observations: 'Este es un usuario de prueba',
+                              address: { address: 'calle 1 # 3-2', city: 'Medellin' },
+                              type: ['client', 'provider'],
+                              seller: nil,
+                              term: { id:'1', name: 'De contado', days:'0' },
+                              price_list:{ id:'1', name:'General' },
+                              internal_contacts:[] }]
+
         client = Alegra::Client.new(@params[:username], @params[:apikey])
         contacts = client.contacts.list()
         expect(contacts.class).to eq Array
