@@ -14,8 +14,8 @@ module Alegra
 
     # Returs all invoices
     # @return [ Array ]
-    def list()
-      client.get('invoices')
+    def list(params = {})
+      client.get('invoices', params)
     end
 
     # Creates a invoice
