@@ -6,13 +6,21 @@ module Alegra
       @client = client
     end
 
-    # @param id [ Interger ]
+    # @param id [ Integer ]
     # @return [ Hash ]
     def find(id)
       client.get("payments/#{id}")
     end
 
     # Returs all payments
+    # @param params [ Hash ]
+    #   - start [ Integer ]
+    #   - limit [ Integer ]
+    #   - order_direction [ String ]
+    #   - order_field [ string ]
+    #   - type [ Integer ]
+    #   - metadata [ Boolean ]
+    #   - id [ Integer ]
     # @return [ Array ]
     def list(params = {})
       client.get('payments', params)
@@ -34,42 +42,29 @@ module Alegra
     #   - currency [ Array ]
     # @return [ Hash ]
     def create(params)
-      params = params.deep_camel_case_lower_keys
-      client.post('payments', params)
+      sanitize_params = params.deep_camel_case_lower_keys
+      client.post('payments', sanitize_params)
     end
 
-    # Creates a invoice
-    # @param params [ Hash ]
-    #   - date [ String ]
-    #   - due_date [ String ]
-    #   - price_list [ Array ]
-    #   - currency [ Array ]
-    #   - payments [ Array ]
-    #   - client [ Integer ] or [ Hash ]
-    #   - items [ Array ]
-    #   - observations [ Array ]
-    #   - anotations [ Array ]
-    #   - terms_conditions [ Array ]
-    #   - status [ String ]
-    #   - number_template [ String ]
-    #   - retenctions [ Array ]
-    #   - seller [ String ]
-    # @return [ Hash ]
-    def update(id, params)
-      _params = params.deep_camel_case_lower_keys
-      client.put("invoices/#{ id }", _params)
-    end
-
+    # Update a payment
     # @param id [ Integer ]
     # @param params [ Hash ]
-    #  - emails [ Array ]
-    #  - send_copy_to_user [ Boolean ]
-    #  - invoiceType [ String ]
+    #   - date [ String ]
+    #   - bank_account [ Integer ] or [ Hash ]
+    #   - payment_method [ String ]
+    #   - observations [ String  ]
+    #   - anotation [ String ]
+    #   - type [ String ]
+    #   - client [ Integer ] or [ Hash ]
+    #   - invoices [ Array ]
+    #   - bills [ Array ]
+    #   - categories [ Array ]
+    #   - retentions [ Array ]
+    #   - currency [ Array ]
     # @return [ Hash ]
-    def send_by_email(id, params)
-      _params = params.deep_camel_case_lower_keys
-      client.post("invoices/#{ id }/email", _params)
+    def update(id, params)
+      sanitize_params = params.deep_camel_case_lower_keys
+      client.put("payments/#{id}", sanitize_params)
     end
   end
 end
-
