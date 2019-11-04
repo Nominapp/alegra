@@ -66,5 +66,11 @@ module Alegra
       sanitize_params = params.deep_camel_case_lower_keys
       client.put("payments/#{id}", sanitize_params)
     end
+
+    # @param id [ Integer ]
+    # @return [ Hash ]
+    def delete(id)
+      client.delete("payments/#{id}")
+    end
   end
 end

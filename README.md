@@ -211,6 +211,10 @@ The next endpoints are pending:
 - Retentions
 - Categories
 - Sellers
+- payments
+  - cancel payment(void)
+  - open payment convert  https://developer.alegra.com/docs/convertir-pago-a-abierto
+  - Add attachment https://developer.alegra.com/docs/adjuntar-archivos-a-pagos
 
 ## License
 
@@ -220,4 +224,3 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 - Diego Gomez
 - Nicolas Mena
-
