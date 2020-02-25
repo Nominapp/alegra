@@ -6,6 +6,7 @@ require 'alegra/contacts'
 require 'alegra/items'
 require 'alegra/payments'
 require 'alegra/company'
+require 'alegra/users'
 
 module Alegra
   class Client
@@ -51,6 +52,10 @@ module Alegra
 
     def company
       Alegra::Company.new(self)
+    end
+
+    def users
+      Alegra::Users.new(self)
     end
   end
 end
