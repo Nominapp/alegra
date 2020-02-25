@@ -1,5 +1,6 @@
 require 'alegra/setup'
 require 'alegra/request'
+require 'alegra/record'
 require 'alegra/invoices'
 require 'alegra/contacts'
 require 'alegra/items'
@@ -12,24 +13,24 @@ module Alegra
       @setup = Alegra::Setup.new(username, apikey, debug)
     end
 
-    def get(url, params = {})
+    def get(url, params = {}, options = { format: :formated })
       request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
-      request.get(url, params)
+      request.get(url, params, options)
     end
 
-    def post(url, params = {})
+    def post(url, params = {}, options = { format: :formated })
       request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
-      request.post(url, params)
+      request.post(url, params, options)
     end
 
-    def put(url, params={})
+    def put(url, params={}, options = { format: :formated })
       request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
-      request.put(url, params)
+      request.put(url, params, options)
     end
 
-    def delete(url, params={})
+    def delete(url, params={}, options = { format: :formated })
       request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
-      request.delete(url, params)
+      request.delete(url, params, options)
     end
 
     def contacts
