@@ -9,6 +9,7 @@ describe Alegra::Company do
         username: 'ejemploapi@dayrep.com',
         apikey: '066b3ab09e72d4548e88'
       }
+      @client = Alegra::Client.new(@params[:username], @params[:apikey])
     end
 
     it 'should get the company information' do
@@ -36,8 +37,7 @@ describe Alegra::Company do
           settings: { can_stamp_invoices: false, electronic_invoicing: false }
         }
 
-        client = Alegra::Client.new(@params[:username], @params[:apikey])
-        company = client.company.find
+        company = @client.company.find
         expect(company.class).to eq Hash
         expect(company).to eq expected_response
       end
@@ -68,8 +68,7 @@ describe Alegra::Company do
           settings: { can_stamp_invoices: false, electronic_invoicing: false }
         }
         params = { website: 'nominapp.com' }
-        client = Alegra::Client.new(@params[:username], @params[:apikey])
-        company = client.company.update(params)
+        company = @client.company.update(params)
         expect(company.class).to eq Hash
         expect(company).to eq(expected_response)
       end
