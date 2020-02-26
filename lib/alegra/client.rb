@@ -8,6 +8,7 @@ require 'alegra/payments'
 require 'alegra/company'
 require 'alegra/users'
 require 'alegra/categories'
+require 'alegra/bank_accounts'
 
 module Alegra
   class Client
@@ -61,6 +62,10 @@ module Alegra
 
     def categories
       Alegra::Categories.new(self)
+    end
+
+    def bank_accounts
+      Alegra::BankAccounts.new(self)
     end
   end
 end
