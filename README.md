@@ -325,9 +325,3 @@ The next endpoints are pending:
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-## Contributors
-
-- Diego Gomez
-- Nicolas Mena
-- Miguel Ferrer
