@@ -78,14 +78,14 @@ module Alegra
 
       error_map = {
         500 => 'Sever error! Something were wrong in the server.',
-        400 => "Bad request!, #{ message }",
+        400 => "Bad request!, #{message}",
         401 => 'Authentication error!',
         402 => 'Required payment!',
         403 => 'Restricted access!',
         404 => 'Not found!',
-        405 => 'Operation does not allowed!',
+        405 => 'Operation does not allowed!'
       }
-      raise StandardError, "Status: #{ response.status }. Error: #{ error_map[response.status] }"
+      raise StandardError, "Status: #{response.status}. Error: #{error_map[response.status]}"
     end
 
     def raise_invalid_format(format)
