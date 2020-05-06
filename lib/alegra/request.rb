@@ -74,7 +74,7 @@ module Alegra
 
       return response if options[:format] == :raw
 
-      message = response.body.empty? ? response.body : Alegra::Response.new(response.body).call['message']
+      message = response.body.empty? ? response.body : Alegra::Response.new(response.body).call[:message]
 
       error_map = {
         500 => 'Sever error! Something were wrong in the server.',
