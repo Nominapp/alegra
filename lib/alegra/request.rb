@@ -74,7 +74,7 @@ module Alegra
 
       return response if options[:format] == :raw
 
-      message = response.body.empty? ? response.body : Alegra::Response.new(response.body).call[:message]
+      message = request_parsed_response(response)
 
       error_map = {
         500 => 'Sever error! Something were wrong in the server.',
@@ -93,6 +93,17 @@ module Alegra
       return if format.nil?
 
       raise StandardError, "#{format} is not a valid format, valid_formats[:formated, :raw]"
+    end
+
+    def request_parsed_response(response)
+      if response.body.empty?
+        response.body
+      else
+        parsed_message = Alegra::Response.new(response.body).call
+        return parsed_message if parsed_message.is_a?(String)
+
+        parsed_message.try(:[], :message)
+      end
     end
   end
 end
