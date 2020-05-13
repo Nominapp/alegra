@@ -19,12 +19,16 @@ module Alegra
         req.headers['Authorization'] = "Basic #{@token}"
       end
 
-      raise StandardError.new if response.status == 429
+      raise if response.status == 429
 
       response_of_request(response, options)
     rescue StandardError
-      sleep(60)
-      retry
+      puts response.inspect
+
+      if response.status == 429
+        sleep(60)
+        retry
+      end
     end
 
     def post(url, params = {}, options = { format: :formated })
@@ -33,17 +37,21 @@ module Alegra
         req.url "#{ @path }#{ url }"
         req.headers['Content-Type'] = 'application/json'
         req.headers['Accept'] = 'application/json'
-        req.headers['Authorization'] = "Basic #{ @token }"
+        req.headers['Authorization'] = "Basic #{@token}"
         req.body = params
       end
 
-      raise StandardError.new if response.status == 429
+      raise if response.status == 429
 
       response_of_request(response, options)
 
     rescue StandardError
-      sleep(60)
-      retry
+      puts response.inspect
+
+      if response.status == 429
+        sleep(60)
+        retry
+      end
     end
 
     def put(url, params={}, options = { format: :formated })
@@ -56,13 +64,15 @@ module Alegra
         req.body = params
       end
 
-      raise StandardError.new if response.status == 429
+      raise if response.status == 429
 
       response_of_request(response, options)
 
     rescue StandardError
-      sleep(60)
-      retry
+      if response.status == 429
+        sleep(60)
+        retry
+      end
     end
 
     def delete(url, params={}, options = { format: :formated })
@@ -75,13 +85,15 @@ module Alegra
         req.body = params
       end
 
-      raise StandardError.new if response.status == 429
+      raise if response.status == 429
 
       response_of_request(response, options)
 
     rescue StandardError
-      sleep(60)
-      retry
+      if response.status == 429
+        sleep(60)
+        retry
+      end
     end
 
     private
