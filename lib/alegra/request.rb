@@ -3,85 +3,112 @@ module Alegra
   class Request
     attr_accessor :path, :token, :session
 
-    def initialize(host, path, token=nil)
+    def initialize(host, path, token = nil)
       @token = token
       @path = path
       @session = Faraday.new url: host
     end
 
-    def get(url, params = {}, options = { format: :formated })
-      params = URI.encode_www_form(params)
+    def get(url, attrs = {}, options = { format: :formated })
+      retries = 1
 
-      response = @session.get do |req|
-        req.url "#{@path}#{url}?#{params}"
-        req.headers['Content-Type'] = 'application/json'
-        req.headers['Accept'] = 'application/json'
-        req.headers['Authorization'] = "Basic #{@token}"
+      begin
+        params = URI.encode_www_form(attrs)
+        response = @session.get do |req|
+          req.url "#{@path}#{url}?#{params}"
+          req.headers['Content-Type'] = 'application/json'
+          req.headers['Accept'] = 'application/json'
+          req.headers['Authorization'] = "Basic #{@token}"
+        end
+
+        raise Timeout::Error.new if response.status == 429
+
+        response_of_request(response, options)
+      rescue Timeout::Error
+        if retries == 1
+          retries -= 1
+          sleep(60)
+          retry
+        end
       end
-
-      raise StandardError.new if response.status == 429
-
-      response_of_request(response, options)
-    rescue StandardError
-      sleep(60)
-      retry
     end
 
-    def post(url, params = {}, options = { format: :formated })
-      params = JSON.generate(params)
-      response = @session.post do |req|
-        req.url "#{ @path }#{ url }"
-        req.headers['Content-Type'] = 'application/json'
-        req.headers['Accept'] = 'application/json'
-        req.headers['Authorization'] = "Basic #{ @token }"
-        req.body = params
+    def post(url, attrs = {}, options = { format: :formated })
+      retries = 1
+
+      begin
+        params = JSON.generate(attrs)
+        response = @session.post do |req|
+          req.url "#{ @path }#{ url }"
+          req.headers['Content-Type'] = 'application/json'
+          req.headers['Accept'] = 'application/json'
+          req.headers['Authorization'] = "Basic #{@token}"
+          req.body = params
+        end
+
+        raise Timeout::Error.new if response.status == 429
+
+        response_of_request(response, options)
+      rescue Timeout::Error
+        if retries == 1
+          retries -= 1
+          sleep(60)
+          retry
+        end
       end
-
-      raise StandardError.new if response.status == 429
-
-      response_of_request(response, options)
-
-    rescue StandardError
-      sleep(60)
-      retry
     end
 
-    def put(url, params={}, options = { format: :formated })
-      params = JSON.generate(params)
-      response = @session.put do |req|
-        req.url "#{ @path }#{ url }"
-        req.headers['Content-Type'] = 'application/json'
-        req.headers['Accept'] = 'application/json'
-        req.headers['Authorization'] = "Basic #{ @token }"
-        req.body = params
+    def put(url, attrs = {}, options = { format: :formated })
+      retries = 1
+
+      begin
+        params = JSON.generate(attrs)
+        response = @session.put do |req|
+          req.url "#{ @path }#{ url }"
+          req.headers['Content-Type'] = 'application/json'
+          req.headers['Accept'] = 'application/json'
+          req.headers['Authorization'] = "Basic #{@token}"
+          req.body = params
+        end
+
+        raise Timeout::Error.new if response.status == 429
+
+        response_of_request(response, options)
+
+      rescue Timeout::Error
+        if retries == 1
+          retries -= 1
+          sleep(60)
+          retry
+        end
       end
-
-      raise StandardError.new if response.status == 429
-
-      response_of_request(response, options)
-
-    rescue StandardError
-      sleep(60)
-      retry
     end
 
-    def delete(url, params={}, options = { format: :formated })
-      params = JSON.generate(params)
-      response = @session.delete do |req|
-        req.url "#{ @path }#{ url }"
-        req.headers['Content-Type'] = 'application/json'
-        req.headers['Accept'] = 'application/json'
-        req.headers['Authorization'] = "Basic #{@token}"
-        req.body = params
+    def delete(url, attrs = {}, options = { format: :formated })
+      retries = 1
+
+      begin
+        params = JSON.generate(attrs)
+
+        response = @session.delete do |req|
+          req.url "#{@path}#{url}"
+          req.headers['Content-Type'] = 'application/json'
+          req.headers['Accept'] = 'application/json'
+          req.headers['Authorization'] = "Basic #{@token}"
+          req.body = params
+        end
+
+        raise Timeout::Error.new if response.status == 429
+
+        response_of_request(response, options)
+
+      rescue Timeout::Error
+        if retries == 1
+          retries -= 1
+          sleep(60)
+          retry
+        end
       end
-
-      raise StandardError.new if response.status == 429
-
-      response_of_request(response, options)
-
-    rescue StandardError
-      sleep(60)
-      retry
     end
 
     private
