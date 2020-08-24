@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.alegra.com/api/v1/cost-centers/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic aW5mb0BxdWluY2VuYS5tZTo2ZTZhOGVkODhkOGNhMmIyN2MyMg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 24 Aug 2020 20:50:30 GMT
+      Server:
+      - nginx
+      Set-Cookie:
+      - PHPSESSID=rlf8ij9ctu8hhoh990r927p282; expires=Wed, 24-Aug-2022 20:50:30 GMT;
+        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-cache
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-Variant, X-Experiment-Onb-Id,
+        X-Request-Origin-Project
+      Access-Control-Allow-Methods:
+      - DELETE
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - "-2"
+      X-Rate-Limit-Remaining:
+      - '149'
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 c9d18591280ab48b39f7a8e685801259.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - BOG50-C1
+      X-Amz-Cf-Id:
+      - aS9xpWoKrQOs1Hr9bP2XCjGSWYaP5gXpZVZb8Rke7mCxDKZ94aZS0Q==
+    body:
+      encoding: UTF-8
+      string: '{"code":"25944","name":"administrativo","description":"","status":"active","id":"1"}'
+    http_version: null
+  recorded_at: Mon, 24 Aug 2020 20:50:30 GMT
+recorded_with: VCR 5.1.0

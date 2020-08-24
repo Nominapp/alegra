@@ -5,7 +5,7 @@ module Alegra
     end
 
     def find(id)
-      client.get("bank-accounts/#{id}", {}, options)
+      client.get("cost-centers/#{id}")
     end
   end
 end
