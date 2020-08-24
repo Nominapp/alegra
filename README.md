@@ -263,6 +263,19 @@ params = { id_destination: 4, # 4 is the destination bank_account_id
 client.bank_accounts.transfer(7, params) # 7 is the origin bank_account_id
 ```
 
+### Cost centers
+
+You can list all your cost centers:
+```ruby
+client.cost_centers.list()
+```
+
+Get a specific cost center by id:
+
+```ruby
+client.cost_centers.find(1)
+```
+
 ### Journals
 
 To retrive all existing journals:
