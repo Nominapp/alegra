@@ -289,7 +289,7 @@ Get a specific estimate by id:
 client.estimates.find(1) # the parameter is the estimate id
 ```
 
-You can create an estimate:
+Create an estimate:
 
 ```ruby
 params = {
@@ -320,7 +320,8 @@ params = {
 client.estimates.create(params)
 ```
 
-Send that estimate by email:
+Send estimate by email:
+
 ```ruby
 params = { emails: emails: ['test@alegra.com'] }
 client.estimates.send_by_email(1, params)
