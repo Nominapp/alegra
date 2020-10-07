@@ -39,5 +39,17 @@ describe Alegra::Estimates do
         expect(estimate).to include(create_estimate_response)
       end
     end
+
+    it 'should send an estimate by email' do
+      VCR.use_cassette('send_email_estimate_response') do
+        _params = {
+          emails: ['test@alegra.com']
+        }
+        client = Alegra::Client.new(@params[:username], @params[:apikey])
+        estimate = client.estimates.send_by_email(2, _params)
+        expect(estimate.class).to eq Hash
+        expect(estimate).to include(code: 200, message: 'La cotización fue enviada exitosamente')
+      end
+    end
   end
 end
