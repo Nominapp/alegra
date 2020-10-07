@@ -11,6 +11,7 @@ require 'alegra/categories'
 require 'alegra/bank_accounts'
 require 'alegra/journals'
 require 'alegra/cost_centers'
+require 'alegra/estimates'
 
 module Alegra
   class Client
@@ -76,6 +77,10 @@ module Alegra
 
     def cost_centers
       Alegra::CostCenters.new(self)
+    end
+
+    def estimates
+      Alegra::Estimates.new(self)
     end
   end
 end
