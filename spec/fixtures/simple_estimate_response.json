@@ -1,0 +1,58 @@
+{
+  "id":"2",
+  "number":"2",
+  "date":"2016-10-12",
+  "dueDate":"2016-10-12",
+  "observations":"",
+  "anotation":"",
+  "client":{
+     "id":"110",
+     "name":"1-800SAP SAS",
+     "identification":"900602222",
+     "phonePrimary":"3123820148",
+     "phoneSecondary":"",
+     "fax":"",
+     "mobile":"",
+     "email":"example+1336@gmail.com",
+     "address":{
+        "address":"",
+        "city":""
+     }
+  },
+  "total":309410,
+  "warehouse":{
+     "id":"1",
+     "name":"Principal"
+  },
+  "seller":"",
+  "priceList":"",
+  "items":[
+     {
+        "id":17,
+        "name":"Empleado_Extra",
+        "description":"Company test one",
+        "price":7900,
+        "discount":"0.00",
+        "reference":"",
+        "quantity":"5.00",
+        "tax":[
+
+        ],
+        "total":39500
+     },
+     {
+        "id":5,
+        "name":"enterprise",
+        "description":"Company test two",
+        "price":299900,
+        "discount":"10.00",
+        "reference":"",
+        "quantity":"1.00",
+        "tax":[
+
+        ],
+        "total":269910
+     }
+  ],
+  "costCenter":""
+}

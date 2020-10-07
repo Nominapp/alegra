@@ -31,6 +31,10 @@ module JsonReponses
     JSON.parse(File.read('./spec/fixtures/update_journal_response.json')).deep_underscore_keys
   end
 
+  def simple_estimate_response
+    JSON.parse(File.read('./spec/fixtures/simple_estimate_response.json')).deep_underscore_keys
+  end
+
   def create_estimate_response
     JSON.parse(File.read('./spec/fixtures/create_estimate_response.json')).deep_underscore_keys
   end

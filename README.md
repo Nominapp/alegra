@@ -276,6 +276,56 @@ Get a specific cost center by id:
 client.cost_centers.find(1)
 ```
 
+Get a specific cost center by id:
+
+```ruby
+client.cost_centers.find(1)
+```
+### Estimates
+
+Get a specific estimate by id:
+
+```ruby
+client.estimates.find(1) # the parameter is the estimate id
+```
+
+You can create an estimate:
+
+```ruby
+params = {
+          date: '2016-10-12',
+          dueDate: '2016-10-12',
+          client: 1,
+          items: [
+                    {
+                        id: 1,
+                        price: 40,
+                        quantity: 5
+                    },
+                    {
+                        id: 2,
+                        description: 'Brown leather wallet',
+                        price: 80,
+                        discount: 10,
+                        tax: [
+                                {
+                                    id: 3,
+                                }
+                             ],
+                        quantity: 1
+                    }
+                  ]
+        }
+
+client.estimates.create(params)
+```
+
+Send that estimate by email:
+```ruby
+params = { emails: emails: ['test@alegra.com'] }
+client.estimates.send_by_email(1, params)
+```
+
 ### Journals
 
 To retrive all existing journals:
@@ -326,7 +376,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/degzcs
 ## TODO
 The next endpoints are pending:
 
-- Estimates
+- Estimates (list, edit, delete)
 - Number templates
 - Retentions
 - Sellers

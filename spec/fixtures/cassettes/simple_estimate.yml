@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.alegra.com/api/v1/estimates/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic aW5mb0BxdWluY2VuYS5tZTo2ZTZhOGVkODhkOGNhMmIyN2MyMg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 07 Oct 2020 20:36:11 GMT
+      Server:
+      - nginx
+      Set-Cookie:
+      - PHPSESSID=ehd4qebnere9hite84mano0lj2; expires=Fri, 07-Oct-2022 20:36:11 GMT;
+        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-cache
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-Variant, X-Experiment-Onb-Id,
+        X-Request-Origin-Project
+      Access-Control-Allow-Methods:
+      - DELETE
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - "-2"
+      X-Rate-Limit-Remaining:
+      - '149'
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 9a39178844243d2fec3f77b9d821e0cb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - BOG50-C1
+      X-Amz-Cf-Id:
+      - b3D6H5cqanckVEhHYNq8jOgiM8gmACTVpyD793N26qxgFIBw40NANg==
+    body:
+      encoding: UTF-8
+      string: '{"id":"2","number":"2","date":"2016-10-12","dueDate":"2016-10-12","observations":"","anotation":"","client":{"id":"110","name":"1-800SAP
+        SAS","identification":"900602222","phonePrimary":"3123820148","phoneSecondary":"","fax":"","mobile":"","email":"example+1336@gmail.com","address":{"address":"","city":""}},"total":309410,"warehouse":{"id":"1","name":"Principal"},"seller":"","priceList":"","items":[{"id":17,"name":"Empleado_Extra","description":"Company
+        test one","price":7900,"discount":"0.00","reference":"","quantity":"5.00","tax":[],"total":39500},{"id":5,"name":"enterprise","description":"Company
+        test two","price":299900,"discount":"10.00","reference":"","quantity":"1.00","tax":[],"total":269910}],"costCenter":""}'
+    http_version: ""
+  recorded_at: Wed, 07 Oct 2020 20:36:12 GMT
+recorded_with: VCR 5.1.0

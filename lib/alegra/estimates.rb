@@ -1,5 +1,10 @@
 module Alegra
   class Estimates < Alegra::Record
+
+    def find(id)
+      client.get("estimates/#{id}")
+    end
+
     def create(params)
       client.post('estimates', params)
     end

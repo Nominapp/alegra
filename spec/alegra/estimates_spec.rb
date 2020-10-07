@@ -11,6 +11,15 @@ describe Alegra::Estimates do
       }
     end
 
+    it 'should retieve an estimate' do
+      VCR.use_cassette('simple_estimate') do
+        client = Alegra::Client.new(@params[:username], @params[:apikey])
+        estimate = client.estimates.find(2)
+        expect(estimate.class).to eq Hash
+        expect(estimate).to include(simple_estimate_response)
+      end
+    end
+
     it 'should create a simple estimate' do
       VCR.use_cassette('create_simple_estimate') do
         _params = {
