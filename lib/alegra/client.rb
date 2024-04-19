@@ -2,6 +2,7 @@ require 'alegra/setup'
 require 'alegra/request'
 require 'alegra/record'
 require 'alegra/invoices'
+require 'alegra/credit_notes'
 require 'alegra/contacts'
 require 'alegra/items'
 require 'alegra/payments'
@@ -45,6 +46,10 @@ module Alegra
 
     def invoices
       Alegra::Invoices.new(self)
+    end
+
+    def credit_notes
+      Alegra::CreditNotes.new(self)
     end
 
     def items
