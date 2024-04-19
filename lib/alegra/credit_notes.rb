@@ -21,7 +21,13 @@ module Alegra
     #   - emission_status [ String ]
     # @return [ Array ]
     def list(params = {})
-      client.get('invoices', params)
+      client.get('credit-notes', params)
+    end
+
+    # Create credit-note
+    def create(params)
+      sanitize_params = params.deep_camel_case_lower_keys
+      client.post('credit-notes', sanitize_params)
     end
   end
 end
