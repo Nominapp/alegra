@@ -48,6 +48,10 @@ module Alegra
       Alegra::Invoices.new(self)
     end
 
+    def credit_notes
+      Alegra::CreditNotes.new(self)
+    end
+
     def items
       Alegra::Items.new(self)
     end
