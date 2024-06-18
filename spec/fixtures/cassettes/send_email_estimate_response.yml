@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://app.alegra.com/api/v1/estimates/2/email
+    uri: https://api.alegra.com/api/v1/estimates/2/email
     body:
       encoding: UTF-8
-      string: '{"emails":["hemes@nominapp.com"]}'
+      string: '{"emails":["test@alegra.com"]}'
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
@@ -22,28 +22,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Tue, 18 Jun 2024 15:43:14 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '68'
       Connection:
       - keep-alive
-      Date:
-      - Wed, 07 Oct 2020 19:07:53 GMT
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=81sijjcj3k7atme4vju9031ch7; expires=Fri, 07-Oct-2022 19:07:52 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - ZkeqxgG_IAMEVHQ=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -51,29 +45,18 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-Variant, X-Experiment-Onb-Id,
-        X-Request-Origin-Project
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '60'
       X-Rate-Limit-Remaining:
       - '149'
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 ed1f055a65d7d8c6a433873cae331419.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - BOG50-C1
-      X-Amz-Cf-Id:
-      - sZhAVSldd_4aeDS5xWMjh-VZh_9WO58xAdG7mdHmikm4GHaY59Ue7g==
     body:
-      encoding: UTF-8
-      string: '{"code":200,"message":"La cotización fue enviada exitosamente"}'
-    http_version: null
-  recorded_at: Wed, 07 Oct 2020 19:07:54 GMT
-recorded_with: VCR 5.1.0
+      encoding: ASCII-8BIT
+      string: '{"code":200,"message":"La cotizaci\u00f3n fue enviada exitosamente"}'
+  recorded_at: Tue, 18 Jun 2024 15:43:14 GMT
+recorded_with: VCR 6.2.0

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://app.alegra.com/api/v1/bank-accounts
+    uri: https://api.alegra.com/api/v1/bank-accounts
     body:
       encoding: UTF-8
       string: '{"name":"test","type":"bank","initialBalance":"100000","initialBalanceDate":"2020-02-25"}'
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
@@ -23,27 +23,21 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Wed, 26 Feb 2020 01:06:41 GMT
+      - Tue, 18 Jun 2024 13:50:01 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '191'
       Connection:
       - keep-alive
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=0mlf5lbjrbectkr211s8cdah20; expires=Fri, 25-Feb-2022 01:06:41 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - ZkOFRhdvIAMEa2Q=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -51,20 +45,18 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-1
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - '11'
+      - '60'
       X-Rate-Limit-Remaining:
-      - '148'
+      - '149'
     body:
       encoding: UTF-8
-      string: '{"id":"9","name":"test","number":null,"description":"","type":"bank","status":"active"}'
-    http_version: null
-  recorded_at: Wed, 26 Feb 2020 01:06:41 GMT
-recorded_with: VCR 5.1.0
+      string: '{"id":"9","name":"test","number":null,"description":"","type":"bank","status":"active","initialBalance":100000,"initialBalanceDate":"2020-02-25","decimalPrecision":"2","calculationScale":"2"}'
+  recorded_at: Tue, 18 Jun 2024 13:50:01 GMT
+recorded_with: VCR 6.2.0

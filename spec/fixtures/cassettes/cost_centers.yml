@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.alegra.com/api/v1/cost-centers
+    uri: https://api.alegra.com/api/v1/cost-centers
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
@@ -22,28 +22,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Tue, 18 Jun 2024 15:10:34 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '86'
       Connection:
       - keep-alive
-      Date:
-      - Mon, 24 Aug 2020 20:34:58 GMT
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=eh67p8tm1p0mroptohkqg8cu47; expires=Wed, 24-Aug-2022 20:34:58 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - ZkZ4rjHWoAMESLQ=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -51,29 +45,18 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-Variant, X-Experiment-Onb-Id,
-        X-Request-Origin-Project
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '60'
       X-Rate-Limit-Remaining:
       - '149'
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 d3ff0e382168a4991fc9b03c4e94bf70.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - BOG50-C1
-      X-Amz-Cf-Id:
-      - 4Q-6WuffcptNHyuadZF_n1B-XlZ2S5evwornNgae2-AG7OQIOt1FLQ==
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '[{"code":"25944","name":"administrativo","description":"","status":"active","id":"1"}]'
-    http_version: null
-  recorded_at: Mon, 24 Aug 2020 20:34:58 GMT
-recorded_with: VCR 5.1.0
+  recorded_at: Tue, 18 Jun 2024 15:10:34 GMT
+recorded_with: VCR 6.2.0

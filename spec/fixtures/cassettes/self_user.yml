@@ -2,19 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.alegra.com/api/v1/users/self
+    uri: https://api.alegra.com/api/v1/users/self
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      - Basic aW5mb0BxdWluY2VuYS5tZTo2ZTZhOGVkODhkOGNhMmIyN2MyMg==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -23,27 +23,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 Feb 2020 23:58:11 GMT
+      - Tue, 18 Jun 2024 19:47:41 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '6084'
       Connection:
       - keep-alive
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=0g6mn6a2ao2jasnabsilif3a42; expires=Thu, 24-Feb-2022 23:58:11 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - ZlCenjEaIAMEbZg=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -51,20 +45,18 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-1
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '60'
       X-Rate-Limit-Remaining:
       - '149'
     body:
-      encoding: UTF-8
-      string: '{"name":null,"lastName":null,"email":"ejemplo@ejemplo.com","role":"admin","status":"active","id":"1","permissions":{"bank-accounts":{"add":"allow","transfer":"allow","view":"allow"},"bills":{"add":"allow","delete":"allow","edit":"allow","view":"allow"},"categories":{"view":"allow"},"contacts":{"add":"allow","delete":"allow","edit":"allow","view":"allow"},"company":{"edit":"allow","retrieve-info":"allow"},"invoices":{"add":"allow","edit":"allow","email":"allow","view":"allow","void":"allow","edit-items-prices":"allow"},"items":{"add":"allow","delete":"allow","edit":"allow","view":"allow"},"retentions":{"view":"allow"},"taxes":{"view":"allow"},"terms":{"view":"allow"},"payments":{"add":"allow","edit":"allow","view":"allow","edit-in":"allow","edit-out":"allow","retrieve-in":"allow","viewin":"allow","viewout":"allow"},"price-lists":{"view":"allow"},"remissions":{"add":"allow","edit":"allow","delete":"allow","view":"allow"},"estimates":{"add":"allow","delete":"allow","view":"allow","edit":"allow"},"currencies":{"index":"allow"},"sellers":{"add":"allow","edit":"allow"},"pos-cashier":{"close":"allow","index":"allow","open":"allow","view":"allow"},"pos-station":{"add":"allow","edit":"allow","view":"allow","index":"allow","delete":"allow"}}}'
-    http_version: null
-  recorded_at: Tue, 25 Feb 2020 23:58:11 GMT
-recorded_with: VCR 5.1.0
+      encoding: ASCII-8BIT
+      string: '{"id":"1","username":null,"name":null,"lastName":null,"email":"info@quincena.me","phone":null,"role":"admin","status":"active","language":"es_CO","position":null,"permissions":{"bank-accounts":{"add":"allow","transfer":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow","connect":"allow"},"bills":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow"},"categories":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow"},"contacts":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow","view-clients":"allow","view-providers":"allow","view-client":"allow","view-provider":"allow"},"company":{"edit":"allow","edit-invoice-info":"allow","retrieve-info":"allow","edit-invoice-template":"allow","user-view-costs":"allow"},"credit-notes":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow"},"invoices":{"add":"allow","edit":"allow","email":"allow","index":"allow","view":"allow","void":"allow","edit-items-prices":"allow","edit-discount":"allow","max-discount-allow":100,"edit-open":"allow","edit-draft":"allow"},"items":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow","import":"allow","bulk-edit":"allow"},"payment":{"index":"allow"},"recurring-invoice":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow"},"recurring-payments":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow"},"reports":{"inventory":"allow","cash-flow":"allow","profit-and-loss":"allow","retrieve-cash-in-tree":"allow","retrieve-cash-out-tree":"allow","retrieve-expense-tree":"allow","retrieve-income-tree":"allow","retrieve-item-inventory":"allow","retrieve-sales-by-client":"allow","retrieve-sales-by-item":"allow","retrieve-trial-balance":"allow","sales-by-client":"allow","sales-by-item":"allow","general-balance":"allow","view-dashboard-info":"allow","sales":"allow","items-profit":"allow","sales-by-seller":"allow","taxes-and-retentions":"allow","income-and-expense":"allow","invoices-open":"allow","bills-open":"allow","transactions":"allow","client-statement":"allow","ledger-journal-categories":"allow","ledger-journals":"allow","general-ledger":"allow","subsidiary-ledger-by-client":"allow","exogenous":"allow","purchases":"allow"},"retentions":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow","toggle-status":"allow"},"taxes":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow","toggle-status":"allow"},"terms":{"add":"allow","delete":"allow","edit":"allow","index":"allow","view":"allow"},"payments":{"add":"allow","delete":"allow","edit":"allow","view":"allow","edit-in":"allow","edit-out":"allow","in":"allow","out":"allow","retrieve-in":"allow","viewin":"allow","viewout":"allow","void":"allow","open":"allow","retrieve-out":"allow"},"inventory-adjustments":{"add":"allow","edit":"allow","delete":"allow","index":"allow","view":"allow"},"debit-notes":{"add":"allow","edit":"allow","delete":"allow","index":"allow","view":"allow"},"journals":{"add":"allow","edit":"allow","delete":"allow","index":"allow","view":"allow"},"exportable":{"accounting-report":"allow","clients":"allow","daily-sales":"allow","transactions":"allow","invoices":"allow","credit-notes":"allow","estimates":"allow","bills":"allow","items":"allow","inventory":"allow","sales":"allow","sales-by-item":"allow","sales-by-client":"allow","invoices-open":"allow","bills-open":"allow","general-balance":"allow","taxes-and-retentions":"allow","profit-and-loss":"allow","income-and-expense":"allow","cash-flow":"allow","sales-by-seller":"allow","items-profit":"allow","purchase-order":"allow","sales-detail":"allow","ledger-journal-categories":"allow","ledger-journals":"allow","general-ledger":"allow","subsidiary-ledger-by-client":"allow","income-debit-notes":"allow","purchases":"allow","report-606":"allow","report-607":"allow","report-608":"allow","it1":"allow","detailed-tax-report":"allow","inventory-adjustment":"allow"},"price-lists":{"add":"allow","edit":"allow","view":"allow","delete":"allow","index":"allow"},"attachments":{"delete":"allow"},"remissions":{"add":"allow","edit":"allow","delete":"allow","export":"allow","edit-items-prices":"allow","edit-discount":"allow","index":"allow","view":"allow","void":"allow","max-discount-allow":100},"purchase-orders":{"add":"allow","edit":"allow","delete":"allow","index":"allow","view":"allow","void":"allow"},"estimates":{"add":"allow","delete":"allow","view":"allow","edit":"allow","edit-items-prices":"allow","edit-discount":"allow","index":"allow","max-discount-allow":100},"warehouses":{"add":"allow","edit":"allow","delete":"allow","view-transfer":"allow","add-transfer":"allow","edit-transfer":"allow","delete-transfer":"allow","index-transfer":"allow","index":"allow","view":"allow","toggle-status":"allow"},"sellers":{"toggle-status":"allow","add":"allow","edit":"allow","delete":"allow","index":"allow","view":"allow"},"number-templates":{"index":"allow","view":"allow","delete":"allow","add":"allow","edit":"allow","toggle-status":"allow"},"currencies":{"index":"allow","add":"allow","edit":"allow","delete":"allow","view":"allow","toggle-status":"allow"},"pos-cashier":{"close":"allow","index":"allow","open":"allow","view":"allow"},"pos-station":{"add":"allow","edit":"allow","view":"allow","index":"allow","delete":"allow"},"cost-centers":{"add":"allow","index":"allow","edit":"allow","view":"allow","delete":"allow","toggle-status":"allow"},"variant-attributes":{"add":"allow","edit":"allow","delete":"allow","toggle-status":"allow","index":"allow","view":"allow"},"custom-fields":{"add":"allow","edit":"allow","delete":"allow","toggle-status":"allow","index":"allow","view":"allow"},"income-debit-notes":{"add":"allow","edit":"allow","delete":"allow","view":"allow","void":"allow","index":"allow"},"closing-periods":{"add":"allow"},"payroll":{"index":"allow"},"minor-expenses":{"index":"allow","view":"allow","add":"allow","edit":"allow","delete":"allow","void":"allow"},"payroll-electronic":{"index":"allow"}}}'
+  recorded_at: Tue, 18 Jun 2024 19:47:41 GMT
+recorded_with: VCR 6.2.0
