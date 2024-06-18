@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://app.alegra.com/api/v1/journals/193
+    uri: https://api.alegra.com/api/v1/journals/3352
     body:
       encoding: UTF-8
       string: "{}"
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
@@ -23,27 +23,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Mar 2020 15:15:30 GMT
+      - Tue, 18 Jun 2024 16:55:54 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '76'
       Connection:
       - keep-alive
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=6h3la18od2dbjdsov6ttgautj6; expires=Sat, 05-Mar-2022 15:15:30 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - ZkpT3gQlIAMES-Q=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -51,20 +45,18 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-2
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '8'
       X-Rate-Limit-Remaining:
-      - '149'
+      - '148'
     body:
-      encoding: UTF-8
-      string: '{"code":200,"message":"El ajuste contable fue eliminado correctamente"}'
-    http_version: null
-  recorded_at: Thu, 05 Mar 2020 15:15:30 GMT
-recorded_with: VCR 5.1.0
+      encoding: ASCII-8BIT
+      string: '{"code":200,"message":"El comprobante contable fue eliminado correctamente"}'
+  recorded_at: Tue, 18 Jun 2024 16:55:54 GMT
+recorded_with: VCR 6.2.0

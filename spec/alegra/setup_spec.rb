@@ -12,7 +12,7 @@ describe Alegra::Setup do
     end
 
     it 'should validate the setup configuration' do
-      expect(setup.host).to eq 'https://app.alegra.com/'
+      expect(setup.host).to eq 'https://api.alegra.com/'
       expect(setup.path).to eq 'api/v1/'
       expect(setup.username).to eq @setup_params[:username]
       expect(setup.apikey).to eq @setup_params[:apikey]

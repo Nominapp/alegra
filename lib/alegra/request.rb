@@ -156,7 +156,9 @@ module Alegra
         parsed_message = Alegra::Response.new(response.body).call
         return parsed_message if parsed_message.is_a?(String)
 
-        parsed_message.try(:[], :message)
+        return parsed_message[:error][:message] if parsed_message.key?(:error)
+
+        parsed_message[:message]
       end
     end
   end

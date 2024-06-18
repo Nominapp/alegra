@@ -7,7 +7,7 @@ module Alegra
     attr_accessor :host, :path, :apikey, :username, :debug, :token
 
     def initialize(username=nil, apikey=nil, debug=false)
-      @host = 'https://app.alegra.com/'
+      @host = "https://api.alegra.com/"
       @path = 'api/v1/'
 
       @debug = debug

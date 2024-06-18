@@ -2,51 +2,43 @@
 http_interactions:
 - request:
     method: post
-    uri: https://app.alegra.com/api/v1/invoices
+    uri: https://api.alegra.com/api/v1/invoices
     body:
       encoding: UTF-8
       string: '{"date":"2016-10-12","dueDate":"2016-10-12","client":1,"items":[{"id":1,"price":40,"quantity":5},{"id":2,"description":"Brown
         leather wallet","price":80,"discount":10,"tax":[{"id":3}],"quantity":1}],"accountNumber":1234,"paymentMethod":"cash","stamp":{"generateStamp":true}}'
     headers:
       User-Agent:
-      - Faraday v0.9.2
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      - Basic aW5mb0BxdWluY2VuYS5tZTo2ZTZhOGVkODhkOGNhMmIyN2MyMg==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 201
-      message: Created
+      code: 400
+      message: Bad Request
     headers:
       Date:
-      - Fri, 14 Oct 2016 14:47:14 GMT
+      - Tue, 18 Jun 2024 15:54:13 GMT
       Content-Type:
-      - text/html; charset=UTF-8
-      Transfer-Encoding:
-      - chunked
+      - application/json
+      Content-Length:
+      - '2592'
       Connection:
       - keep-alive
       Server:
-      - nginx/1.10.0
-      X-Powered-By:
-      - PHP/7.0.9
-      Set-Cookie:
-      - PHPSESSID=dchbb0r2gg3ucofbqndf27s224; expires=Sun, 14-Oct-2018 14:47:13 GMT;
-        Max-Age=63072000; path=/; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      - nginx
+      Apigw-Requestid:
+      - ZkgRfh0KoAMEV6Q=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -54,26 +46,32 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
+      - POST
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - '57'
+      - '60'
       X-Rate-Limit-Remaining:
-      - '146'
+      - '149'
     body:
       encoding: UTF-8
-      string: '{"id":"4","date":"2016-10-12","dueDate":"2016-10-12","observations":null,"anotation":null,"termsConditions":"Esta
-        factura se asimila en todos sus efectos a una letra de cambio de conformidad
-        con el Art. 774 del c\u00f3digo de comercio. Autorizo que en caso de incumplimiento
+      string: '{"error":{"message":"La factura no se pudo emitir porque La compa\u00f1\u00eda
+        no ha sido configurada para emitir facturas electr\u00f3nicas","code":3051},"invoice":{"id":"528","date":"2016-10-12","dueDate":"2016-10-12","datetime":"2024-06-18
+        10:54:11","observations":null,"anotation":null,"termsConditions":"Esta factura
+        se asimila en todos sus efectos a una letra de cambio de conformidad con el
+        Art. 774 del c\u00f3digo de comercio. Autorizo que en caso de incumplimiento
         de esta obligaci\u00f3n sea reportado a las centrales de riesgo, se cobraran
-        intereses por mora.","status":"draft","client":{"id":"1","name":"cliente","identification":"123456789","phonePrimary":"","phoneSecondary":"","fax":"","mobile":"3004232123","email":"cliente@test.com","address":{"address":"calle
-        1 # 3-2","city":"Medellin"}},"numberTemplate":{"id":"1","prefix":null,"number":"4","text":null},"total":284,"totalPaid":0,"seller":null,"priceList":null,"items":[{"id":1,"name":"item1","description":null,"price":40,"discount":"","reference":null,"quantity":5,"tax":[],"total":200},{"id":2,"name":"item2","description":"Brown
-        leather wallet","price":80,"discount":"10","reference":null,"quantity":1,"tax":[{"id":"3","name":"IVA","percentage":"16.00","description":"","type":"IVA"}],"total":84}]}'
-    http_version: 
-  recorded_at: Fri, 14 Oct 2016 14:47:14 GMT
-recorded_with: VCR 3.0.3
+        intereses por mora.","status":"draft","client":{"id":"1","name":"A. Sara Osa","identification":"98277222","phonePrimary":"3002675430","phoneSecondary":null,"fax":null,"mobile":null,"email":"andres+test@quincena.me","address":{"address":"Calle
+        6 sur # 43 C 33","department":null,"city":"Medellin"},"kindOfPerson":"","regime":"SIMPLIFIED_REGIME","identificationObject":{"type":null,"number":"98277222"}},"numberTemplate":{"id":"1","prefix":null,"number":"516","text":null,"documentType":"invoice","fullNumber":"516","formattedNumber":"516"},"subtotal":280,"discount":8,"tax":13.68,"total":285.68,"totalPaid":0,"balance":285.68,"decimalPrecision":"2","warehouse":{"id":"1","name":"Principal"},"term":"De
+        contado","paymentMethod":"cash","seller":null,"priceList":{"id":1,"name":"General"},"items":[{"name":"Plan_Mensual_Nominapp","description":null,"price":40,"discount":0,"reference":null,"quantity":5,"id":1,"productKey":null,"unit":null,"tax":[],"total":200},{"name":"entrepreneur","description":"Brown
+        leather wallet","price":80,"discount":10,"reference":null,"quantity":1,"id":2,"discountObject":{"discount":10,"nature":null},"productKey":null,"unit":null,"tax":[{"id":"3","name":"IVA","percentage":"19.00","description":"","status":"active","type":"IVA","categoryFavorable":{"id":"5035","idParent":"5034","name":"IVA
+        a favor","text":"IVA a favor","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"44","name":"IVA
+        a favor","key":"IVA_IN_FAVOR_COL"},"use":"movement","showThirdPartyBalance":true},"categoryToBePaid":{"id":"5056","idParent":"5055","name":"Iva
+        por pagar","text":"Iva por pagar","code":null,"description":null,"type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"47","name":"IVA
+        por pagar","key":"IVA_TO_PAY_COL"},"use":"movement","showThirdPartyBalance":true},"amount":13.68}],"total":85.68}],"costCenter":null,"printingTemplate":{"id":"1","name":"Cl\u00e1sico","pageSize":"letter"}}}'
+  recorded_at: Tue, 18 Jun 2024 15:54:13 GMT
+recorded_with: VCR 6.2.0

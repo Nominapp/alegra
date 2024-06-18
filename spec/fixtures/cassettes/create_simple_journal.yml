@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://app.alegra.com/api/v1/journals
+    uri: https://api.alegra.com/api/v1/journals
     body:
       encoding: UTF-8
-      string: '{"date":"2020-03-05","client":"416","entries":[{"id":"5009","debit":3000000},{"id":"5048","credit":4250660},{"id":"5008","debit":755000},{"id":"5010","debit":495660}]}'
+      string: '{"date":"2024-06-18","client":"416","entries":[{"id":"5009","debit":3000000},{"id":"5048","credit":4250660},{"id":"5008","debit":755000},{"id":"5010","debit":495660}]}'
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
@@ -23,27 +23,21 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Thu, 05 Mar 2020 14:59:00 GMT
+      - Tue, 18 Jun 2024 16:45:05 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '8588'
       Connection:
       - keep-alive
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=c4tttta7b38rrofnrql2m19b60; expires=Sat, 05-Mar-2022 14:58:59 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - Zknt8hGFIAMEbHA=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -51,28 +45,52 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-2
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - '18'
+      - '60'
       X-Rate-Limit-Remaining:
-      - '148'
+      - '149'
     body:
       encoding: UTF-8
-      string: '{"id":"193","entries":[{"id":"5009","client":{"id":"416","name":"Rodrigo
-        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"name":"Salarios","description":null,"debit":3000000,"credit":0},{"id":"5048","client":{"id":"416","name":"Rodrigo
-        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"name":"Obligaciones
-        financieras y pr\u00e9stamos a terceros","description":null,"debit":0,"credit":4250660},{"id":"5008","client":{"id":"416","name":"Rodrigo
-        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"name":"Prestaciones
-        sociales","description":null,"debit":755000,"credit":0},{"id":"5010","client":{"id":"416","name":"Rodrigo
-        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"name":"Seguridad
-        social y parafiscales","description":null,"debit":495660,"credit":0}],"client":{"id":"416","name":"Rodrigo
-        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"date":"2020-03-05","observations":null,"reference":null,"status":"open","total":4250660}'
-    http_version: null
-  recorded_at: Thu, 05 Mar 2020 14:59:00 GMT
-recorded_with: VCR 5.1.0
+      string: '{"id":"3352","entries":[{"id":"5009","client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"fiscalResidence":"RESIDENT","enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},"name":"Salarios
+        prueba","description":null,"debit":3000000,"credit":0,"type":"category","line":null,"lineParent":null,"costCenter":null,"associatedDocument":{"idResource":null,"resourceType":null,"resource":null}},{"id":"5048","client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"fiscalResidence":"RESIDENT","enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},"name":"Obligaciones
+        financieras y pr\u00e9stamos a terceros","description":null,"debit":0,"credit":4250660,"type":"category","line":null,"lineParent":null,"costCenter":null,"associatedDocument":{"idResource":null,"resourceType":null,"resource":null}},{"id":"5008","client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"fiscalResidence":"RESIDENT","enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},"name":"Prestaciones
+        sociales","description":null,"debit":755000,"credit":0,"type":"category","line":null,"lineParent":null,"costCenter":null,"associatedDocument":{"idResource":null,"resourceType":null,"resource":null}},{"id":"5010","client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"fiscalResidence":"RESIDENT","enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},"name":"Seguridad
+        social y parafiscales","description":null,"debit":495660,"credit":0,"type":"category","line":null,"lineParent":null,"costCenter":null,"associatedDocument":{"idResource":null,"resourceType":null,"resource":null}}],"client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"fiscalResidence":"RESIDENT","enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},"date":"2024-06-18","observations":null,"reference":null,"status":"open","total":4250660}'
+  recorded_at: Tue, 18 Jun 2024 16:45:05 GMT
+recorded_with: VCR 6.2.0

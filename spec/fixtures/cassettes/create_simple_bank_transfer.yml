@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://app.alegra.com/api/v1/bank-accounts/7/transfer
+    uri: https://api.alegra.com/api/v1/bank-accounts/7/transfer
     body:
       encoding: UTF-8
       string: '{"idDestination":4,"amount":100000,"date":"2020-02-25"}'
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
@@ -23,27 +23,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 26 Feb 2020 01:05:54 GMT
+      - Tue, 18 Jun 2024 13:51:35 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '485'
       Connection:
       - keep-alive
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=k2dsra7u0vedv6vuh3nrsdfe35; expires=Fri, 25-Feb-2022 01:05:52 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - ZkOT8iFWoAMEaCA=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -51,21 +45,19 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-1
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '60'
       X-Rate-Limit-Remaining:
       - '149'
     body:
-      encoding: UTF-8
-      string: '{"originAccount":{"id":"7","name":"test","number":null,"description":"","type":"bank","status":"active"},"destinationAccount":{"id":"4","name":"Bancolombia","number":"0093230987","description":"Cuenta
-        de Bancolombia","type":"bank","status":"active"},"amount":100000}'
-    http_version: null
-  recorded_at: Wed, 26 Feb 2020 01:05:54 GMT
-recorded_with: VCR 5.1.0
+      encoding: ASCII-8BIT
+      string: '{"originAccount":{"id":"7","name":"Definitiva","number":"","description":"","type":"bank","status":"active","initialBalance":10300000,"initialBalanceDate":"2020-02-25","decimalPrecision":null,"calculationScale":null},"destinationAccount":{"id":"4","name":"Bancolombia","number":"0093230987","description":"Cuenta
+        de Bancolombia","type":"bank","status":"active","initialBalance":5000000,"initialBalanceDate":"2017-02-08","decimalPrecision":null,"calculationScale":null},"amount":100000}'
+  recorded_at: Tue, 18 Jun 2024 13:51:35 GMT
+recorded_with: VCR 6.2.0

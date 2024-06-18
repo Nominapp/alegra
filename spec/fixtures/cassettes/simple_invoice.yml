@@ -2,19 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.alegra.com/api/v1/invoices/1
+    uri: https://api.alegra.com/api/v1/invoices/1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.2
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      - Basic aW5mb0BxdWluY2VuYS5tZTo2ZTZhOGVkODhkOGNhMmIyN2MyMg==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -23,29 +23,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Oct 2016 14:47:11 GMT
+      - Tue, 18 Jun 2024 15:49:13 GMT
       Content-Type:
-      - text/html; charset=UTF-8
-      Transfer-Encoding:
-      - chunked
+      - application/json
+      Content-Length:
+      - '1358'
       Connection:
       - keep-alive
       Server:
-      - nginx/1.10.0
-      X-Powered-By:
-      - PHP/7.0.9
-      Set-Cookie:
-      - PHPSESSID=urk8i6rue2i2tu3urq56gfn976; expires=Sun, 14-Oct-2018 14:47:11 GMT;
-        Max-Age=63072000; path=/; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      - nginx
+      Apigw-Requestid:
+      - ZkfiyhBaIAMEbKg=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -53,27 +45,26 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
+      - GET
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - '59'
+      - '60'
       X-Rate-Limit-Remaining:
-      - '148'
+      - '149'
     body:
-      encoding: UTF-8
-      string: '{"id":"1","date":"2016-10-12","dueDate":"2016-10-12","observations":"","anotation":"invoice
-        test","termsConditions":"Esta factura se asimila en todos sus efectos a una
-        letra de cambio de conformidad con el Art. 774 del c\u00f3digo de comercio.
-        Autorizo que en caso de incumplimiento de esta obligaci\u00f3n sea reportado
-        a las centrales de riesgo, se cobraran intereses por mora.","status":"open","client":{"id":"1","name":"cliente","identification":"123456789","phonePrimary":"","phoneSecondary":"","fax":"","mobile":"3004232123","email":"cliente@test.com","address":{"address":"calle
-        1 # 3-2","city":"Medellin"}},"numberTemplate":{"id":"1","prefix":null,"number":"1","text":null},"total":139,"totalPaid":0,"seller":null,"priceList":{"id":"1","name":"General"},"items":[{"id":1,"name":"item1","description":"item
-        de venta 1","price":40,"discount":"0.00","reference":"ref1","quantity":"1.00","tax":[{"id":"3","name":"IVA","percentage":"16.00","description":"","type":"IVA"}],"total":46},{"id":2,"name":"item2","description":"item2
-        de venta","price":80,"discount":"0.00","reference":"ref2","quantity":"1.00","tax":[{"id":"3","name":"IVA","percentage":"16.00","description":"","type":"IVA"}],"total":93}]}'
-    http_version: 
-  recorded_at: Fri, 14 Oct 2016 14:47:11 GMT
-recorded_with: VCR 3.0.3
+      encoding: ASCII-8BIT
+      string: '{"id":"1","date":"2017-09-15","dueDate":"2017-09-15","datetime":"2017-09-15
+        15:56:32","observations":null,"anotation":null,"termsConditions":"Esta factura
+        se asimila en todos sus efectos a una letra de cambio de conformidad con el
+        Art. 774 del c\u00f3digo de comercio. Autorizo que en caso de incumplimiento
+        de esta obligaci\u00f3n sea reportado a las centrales de riesgo, se cobraran
+        intereses por mora.","status":"void","client":{"id":"72","name":"3 Dise\u00f1o
+        Digital S.A.S","identification":"900582829","phonePrimary":"3108250226","phoneSecondary":null,"fax":null,"mobile":null,"email":"fsalazar@tresdiseno.com","address":{"address":null,"department":null,"city":null},"kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"900582829"}},"numberTemplate":{"id":"1","prefix":null,"number":"1","text":null,"documentType":"invoice","fullNumber":"1","formattedNumber":"1"},"subtotal":49900,"discount":0,"tax":0,"total":49900,"totalPaid":0,"balance":49900,"decimalPrecision":"0","warehouse":{"id":"1","name":"Principal"},"term":"De
+        contado","seller":null,"priceList":null,"items":[{"name":"Plan_Pyme_Nominapp","description":null,"price":49900,"discount":0,"reference":null,"quantity":1,"id":7,"productKey":null,"unit":null,"tax":[],"total":49900}],"costCenter":null,"printingTemplate":{"id":"1","name":"Cl\u00e1sico","pageSize":"letter"}}'
+  recorded_at: Tue, 18 Jun 2024 15:49:13 GMT
+recorded_with: VCR 6.2.0

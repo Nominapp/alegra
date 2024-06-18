@@ -16,7 +16,7 @@ describe Alegra::Journals do
       VCR.use_cassette('list_of_journals') do
         journals = @client.journals.list
         expect(journals.class).to eq Array
-        expect(journals).to include(simple_journal_response)
+        expect(journals).to eq list_all_journals_response
       end
     end
 
@@ -24,7 +24,7 @@ describe Alegra::Journals do
       VCR.use_cassette('simple_journal') do
         journal = @client.journals.find(191)
         expect(journal.class).to eq Hash
-        expect(journal).to include(simple_journal_response)
+        expect(journal).to eq show_a_specific_journal_response
       end
     end
 
@@ -39,27 +39,27 @@ describe Alegra::Journals do
 
         journal = @client.journals.create(params)
         expect(journal.class).to eq Hash
-        expect(journal).to include(create_journal_response)
+        expect(journal).to eq create_journal_response
       end
     end
 
     it 'should update a journal' do
       VCR.use_cassette('update_journal') do
         params = { entries: [{ id: '5009', debit: 3_000_000 },
-                             { id: '5048', credit: 4_150_660 },
-                             { id: '5008', debit: 655_000 },
-                             { id: '5010', debit: 495_660 }] }
-        journal = @client.journals.update(193, params)
+                             { id: '5039', credit: 4_150_660 },
+                             { id: '5047', debit: 655_000 },
+                             { id: '5048', debit: 495_660 }] }
+        journal = @client.journals.update(3352, params)
         expect(journal.class).to eq Hash
-        expect(journal).to include(update_journal_response)
+        expect(journal).to eq update_journal_response
       end
     end
 
     it 'should delete a journal' do
       VCR.use_cassette('delete_journal') do
-        journal = @client.journals.delete(193)
+        journal = @client.journals.delete(3352)
         expect(journal.class).to eq Hash
-        expect(journal).to eq(code: 200, message: 'El ajuste contable fue eliminado correctamente')
+        expect(journal).to eq(code: 200, message: 'El comprobante contable fue eliminado correctamente')
       end
     end
   end
