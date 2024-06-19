@@ -2,14 +2,14 @@
 http_interactions:
 - request:
     method: post
-    uri: https://app.alegra.com/api/v1/estimates
+    uri: https://api.alegra.com/api/v1/estimates
     body:
       encoding: UTF-8
       string: '{"date":"2016-10-12","dueDate":"2016-10-12","client":110,"items":[{"id":17,"price":7900,"quantity":5,"description":"Company
         test one"},{"id":5,"description":"Company test two","price":299900,"discount":10,"quantity":1}]}'
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
@@ -23,28 +23,22 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Date:
+      - Tue, 18 Jun 2024 15:27:09 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '897'
       Connection:
       - keep-alive
-      Date:
-      - Wed, 07 Oct 2020 18:34:35 GMT
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=ln0kegm2npvmpv34ldu94kb2h5; expires=Fri, 07-Oct-2022 18:34:34 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - ZkcT8iiaIAMEY7g=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -52,32 +46,21 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-Variant, X-Experiment-Onb-Id,
-        X-Request-Origin-Project
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '60'
       X-Rate-Limit-Remaining:
       - '149'
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 aeb457e87760dc433cf50cdb15399112.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - BOG50-C1
-      X-Amz-Cf-Id:
-      - 7BJlGJsmbQcWE2s6bw-VHUrSpPsc4ufsE0aYlAq4I6MbT0UFRMEgvQ==
     body:
       encoding: UTF-8
-      string: '{"id":"2","number":"2","date":"2016-10-12","dueDate":"2016-10-12","observations":"","anotation":"","client":{"id":"110","name":"1-800SAP
-        SAS","identification":"900602222","phonePrimary":"3123820148","phoneSecondary":"","fax":"","mobile":"","email":"example+1336@gmail.com","address":{"address":"","city":""}},"total":309410,"warehouse":{"id":"1","name":"Principal"},"seller":"","priceList":"","items":[{"id":17,"name":"Empleado_Extra","description":"Company
-        test one","price":7900,"discount":"0.00","reference":"","quantity":"5.00","tax":[],"total":39500},{"id":5,"name":"enterprise","description":"Company
-        test two","price":299900,"discount":"10.00","reference":"","quantity":"1.00","tax":[],"total":269910}],"costCenter":""}'
-    http_version: ""
-  recorded_at: Wed, 07 Oct 2020 18:34:36 GMT
-recorded_with: VCR 5.1.0
+      string: '{"id":"261","number":"261","date":"2016-10-12","dueDate":"2016-10-12","observations":null,"anotation":null,"status":"unbilled","client":{"id":"110","name":"1-800SAP
+        SAS","identification":"900602222","phonePrimary":"3123820148","phoneSecondary":null,"fax":null,"mobile":null,"email":"example+1336@gmail.com","address":{"address":null,"city":null}},"total":309410,"warehouse":{"id":"1","name":"Principal"},"numberTemplate":{"id":"6","prefix":null,"number":"261","fullNumber":"261","formattedNumber":"261"},"decimalPrecision":"2","seller":null,"priceList":null,"items":[{"id":17,"name":"Empleado_Extra","description":"Company
+        test one","price":7900,"discount":"0.00","reference":null,"quantity":"5.00","tax":[],"total":39500},{"id":5,"name":"enterprise","description":"Company
+        test two","price":299900,"discount":"10.00","reference":null,"quantity":"1.00","tax":[],"total":269910}],"costCenter":null}'
+  recorded_at: Tue, 18 Jun 2024 15:27:09 GMT
+recorded_with: VCR 6.2.0

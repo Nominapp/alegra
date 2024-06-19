@@ -16,7 +16,7 @@ describe Alegra::Estimates do
         client = Alegra::Client.new(@params[:username], @params[:apikey])
         estimate = client.estimates.find(2)
         expect(estimate.class).to eq Hash
-        expect(estimate).to include(simple_estimate_response)
+        expect(estimate).to eq simple_estimate_response
       end
     end
 

@@ -1,58 +1,63 @@
 {
-  "id":"2",
-  "number":"2",
-  "date":"2016-10-12",
-  "due_date":"2016-10-12",
-  "observations":"",
-  "anotation":"",
-  "client":{
-     "id":"110",
-     "name":"1-800SAP SAS",
-     "identification":"900602222",
-     "phone_primary":"3123820148",
-     "phone_secondary":"",
-     "fax":"",
-     "mobile":"",
-     "email":"example+1336@gmail.com",
-     "address":{
-        "address":"",
-        "city":""
-     }
-  },
-  "total":309410,
-  "warehouse":{
-     "id":"1",
-     "name":"Principal"
-  },
-  "seller":"",
-  "price_list":"",
-  "items":[
-     {
-        "id":17,
-        "name":"Empleado_Extra",
-        "description":"Company test one",
-        "price":7900,
-        "discount":"0.00",
-        "reference":"",
-        "quantity":"5.00",
-        "tax":[
-
-        ],
-        "total":39500
-     },
-     {
-        "id":5,
-        "name":"enterprise",
-        "description":"Company test two",
-        "price":299900,
-        "discount":"10.00",
-        "reference":"",
-        "quantity":"1.00",
-        "tax":[
-
-        ],
-        "total":269910
-     }
-  ],
-  "cost_center":""
+"id": "261",
+"number": "261",
+"date": "2016-10-12",
+"due_date": "2016-10-12",
+"observations": null,
+"anotation": null,
+"status": "unbilled",
+"client": {
+"id": "110",
+"name": "1-800SAP SAS",
+"identification": "900602222",
+"phone_primary": "3123820148",
+"phone_secondary": null,
+"fax": null,
+"mobile": null,
+"email": "example+1336@gmail.com",
+"address": {
+"address": null,
+"city": null
+}
+},
+"total": 309410,
+"warehouse": {
+"id": "1",
+"name": "Principal"
+},
+"number_template": {
+"id": "6",
+"prefix": null,
+"number": "261",
+"full_number": "261",
+"formatted_number": "261"
+},
+"decimal_precision": "2",
+"seller": null,
+"price_list": null,
+"items": [
+{
+"id": 17,
+"name": "Empleado_Extra",
+"description": "Company test one",
+"price": 7900,
+"discount": "0.00",
+"reference": null,
+"quantity": "5.00",
+"tax": [],
+"total": 39500
+},
+{
+"id": 5,
+"name": "enterprise",
+"description": "Company test two",
+"price": 299900,
+"discount": "10.00",
+"reference": null,
+"quantity": "1.00",
+"tax": [],
+"total": 269910
+}
+],
+"cost_center": null
 }

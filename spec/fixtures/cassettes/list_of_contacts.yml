@@ -2,19 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.alegra.com/api/v1/contacts
+    uri: https://api.alegra.com/api/v1/contacts
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.2
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      - Basic aW5mb0BxdWluY2VuYS5tZTo2ZTZhOGVkODhkOGNhMmIyN2MyMg==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -23,29 +23,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Oct 2016 15:09:02 GMT
+      - Tue, 18 Jun 2024 14:05:22 GMT
       Content-Type:
-      - text/html; charset=UTF-8
-      Transfer-Encoding:
-      - chunked
+      - application/json
+      Content-Length:
+      - '42882'
       Connection:
       - keep-alive
       Server:
-      - nginx/1.10.0
-      X-Powered-By:
-      - PHP/7.0.9
-      Set-Cookie:
-      - PHPSESSID=i52ag13ge1hqkt0es4hq19at97; expires=Sun, 14-Oct-2018 15:09:02 GMT;
-        Max-Age=63072000; path=/; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      - nginx
+      Apigw-Requestid:
+      - ZkQVKivjIAMEVcQ=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -53,22 +45,193 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '60'
       X-Rate-Limit-Remaining:
       - '149'
     body:
-      encoding: UTF-8
-      string: '[{"id":"1","name":"cliente","identification":"123456789","email":"cliente@test.com","phonePrimary":"","phoneSecondary":"","fax":"","mobile":"3004232123","observations":"Este
-        es un usuario de prueba","address":{"address":"calle 1 # 3-2","city":"Medellin"},"type":["client","provider"],"seller":null,"term":{"id":"1","name":"De
-        contado","days":"0"},"priceList":{"id":"1","name":"General"},"internalContacts":[]}]'
-    http_version:
-  recorded_at: Fri, 14 Oct 2016 15:09:02 GMT
-recorded_with: VCR 3.0.3
+      encoding: ASCII-8BIT
+      string: '[{"id":"838","name":"  r","identification":"345657865","email":"juan@nominapp.com","phonePrimary":"3213776821","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"345657865","dv":6},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"76","name":"
+        DISTRIBUIDORA GMC","identification":"108532441","email":"nmena.garzon+969@gmail.com","phonePrimary":"3506549229","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":"NIT","number":"108532441","dv":1},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":[],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"863","name":"
+        LION CONSULTING SAS","identification":"900449229","email":"juan@nominapp.com","phonePrimary":"3208531175","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"900449229","dv":2},"enableHealthSector":false,"healthPatients":null,"address":{"address":"CRA
+        49B 104A 04","city":"Bogota, D.C.","department":"Bogota","country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"912","name":"
+        LOS PATIOS HOSTAL BOUTIQUE SAS","identification":"901138060","email":"juan@nominapp.com","phonePrimary":"3174278360","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"901138060","dv":4},"enableHealthSector":false,"healthPatients":null,"address":{"address":"CR
+        43 E 11 38 40","city":"Medell\u00edn","department":"Antioquia","country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"654","name":".....","identification":"111111110","email":"juan@nominapp.com","phonePrimary":"6192985078","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"111111110","dv":1},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"118","name":"00000000","identification":"000000000-0","email":"nmena.garzon+1892@gmail.com","phonePrimary":"0000000000","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"000000000-0"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"830","name":"0PruebaJuanDa","identification":"901543466","email":"juan@nominapp.com","phonePrimary":"3003003000","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"901543466","dv":7},"enableHealthSector":false,"healthPatients":null,"address":{"address":"dfsdf","city":"Medellin","department":"Antioquia","country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"110","name":"1-800SAP
+        SAS","identification":"900602222","email":"example+1336@gmail.com","phonePrimary":"3123820148","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"900602222"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"119","name":"111","identification":"888888888-6","email":"nmena.garzon+2037@gmail.com","phonePrimary":"21343432","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"888888888-6"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"870","name":"1111111","identification":"131313131","email":"juan@nominapp.com","phonePrimary":"3005555555","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"131313131","dv":6},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"120","name":"123","identification":"121212121-7","email":"nmena.garzon+1343@gmail.com","phonePrimary":"121212121212","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"121212121-7"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"109","name":"23Agencia","identification":"","email":"example+1257@gmail.com","phonePrimary":"3374666","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":""},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"121","name":"2AA","identification":"43543334-1","email":"nmena.garzon+1689@gmail.com","phonePrimary":"3005629585","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"43543334-1"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"123","name":"2bg
+        sas","identification":"800201704-1","email":"nmena.garzon+1802@gmail.com","phonePrimary":"3108398131","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"800201704-1"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"72","name":"3
+        Dise\u00f1o Digital S.A.S","identification":"900582829","email":"fsalazar@tresdiseno.com","phonePrimary":"3108250226","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"900582829","dv":1},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"73","name":"3
+        Ruedas Carrocerias S.A.S","identification":"900647795","email":"info@tresruedas.com.co","phonePrimary":"3017396129","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"900647795","dv":9},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"124","name":"3-S
+        S.A.S","identification":"900848385-5","email":"nmena.garzon+758@gmail.com","phonePrimary":"6960826","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"900848385-5"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"112","name":"360
+        Inversiones S.A.S.","identification":"900538419","email":"igomez@ucatolica.edu.co","phonePrimary":"3102936266","phoneSecondary":"","fax":"","mobile":"","observations":"","status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"900538419","dv":7},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":{"id":1,"name":"De
+        contado","days":"0"},"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":true,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"861","name":"47re0jygek
+        3cywlin2qx","identification":"646464565","email":"juan@nominapp.com","phonePrimary":"3204589659","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"646464565","dv":4},"enableHealthSector":false,"healthPatients":null,"address":{"address":"sdfsfsdfs","city":"Medellin","department":"Antioquia","country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"862","name":"5wvpk32hmlcl
+        0x6daj364jar","identification":"242342345","email":"juan@nominapp.com","phonePrimary":"3127777777","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"242342345","dv":1},"enableHealthSector":false,"healthPatients":null,"address":{"address":"fdsfdsf","city":"Medellin","department":"Antioquia","country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"137","name":"A
+        INDUSTRIAS S.A.S","identification":"-","email":"example+179@gmail.com","phonePrimary":"3046024723","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"-"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"1","name":"A.
+        Sara Osa","identification":"98277222","email":"andres+test@quincena.me","phonePrimary":"3002675430","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"SIMPLIFIED_REGIME","identificationObject":{"type":null,"number":"98277222"},"fiscalResidence":"RESIDENT","enableHealthSector":false,"healthPatients":null,"address":{"address":"Calle
+        6 sur # 43 C 33","city":"Medellin","department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"127","name":"ABA
+        servicio tecnico especializado","identification":"80441855-3","email":"nmena.garzon+1035@gmail.com","phonePrimary":"3118082921","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"80441855-3"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"126","name":"ABC
+        Ltda.","identification":"891201796-1","email":"nmena.garzon+1043@gmail.com","phonePrimary":"3114484456","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"891201796-1"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"129","name":"ABC
+        Publicidad Ltda","identification":"900918234-2","email":"nmena.garzon+811@gmail.com","phonePrimary":"3192417205","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"900918234-2"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"699","name":"AC
+        ASESORIAS","identification":"98665924","email":"juan@nominapp.com","phonePrimary":"3104166045","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"PERSON_ENTITY","regime":"COMMON_REGIME","nameObject":{"firstName":"AC","lastName":"ASESORIAS"},"identificationObject":{"type":"CC","number":"98665924"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":"Colombia","zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"130","name":"ACCESORIOS  Y
+        REPUESTOS ARLEY","identification":"999999999-4","email":"nmena.garzon+1796@gmail.com","phonePrimary":"3174397310","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"999999999-4"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"75","name":"ACCESORIOS
+        AVE MARIA ","identification":"1033647333","email":"info@accesoriosavemaria.com","phonePrimary":"3003423657","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"1033647333"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":[],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"131","name":"ACCESORIOS
+        KAMO","identification":"111059097-1","email":"nmena.garzon+698@gmail.com","phonePrimary":"3228707373","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"","regime":"","identificationObject":{"type":null,"number":"111059097-1"},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}},{"id":"273","name":"Activity
+        Technology S.A.S","identification":"900430745","email":"fguerra@activity.com.co","phonePrimary":"3113931556","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"status":"active","kindOfPerson":"LEGAL_ENTITY","regime":"COMMON_REGIME","identificationObject":{"type":"NIT","number":"900430745","dv":8},"enableHealthSector":false,"healthPatients":null,"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["client"],"seller":null,"term":null,"priceList":null,"internalContacts":[],"settings":{"sendElectronicDocuments":false},"statementAttached":false,"accounting":{"accountReceivable":{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","text":"Cuentas por cobrar","code":null,"description":null,"type":"asset","readOnly":false,"nature":"debit","blocked":"no","status":"active","categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"},"use":"movement","showThirdPartyBalance":true},"debtToPay":{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","text":"Cuentas por pagar - proveedores","code":null,"description":"Bajo
+        esta categor\u00eda se encuentran los pasivos principales","type":"liability","readOnly":false,"nature":"credit","blocked":"no","status":"active","categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"},"use":"movement","showThirdPartyBalance":true}}}]'
+  recorded_at: Tue, 18 Jun 2024 14:05:22 GMT
+recorded_with: VCR 6.2.0

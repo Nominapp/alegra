@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: put
-    uri: https://app.alegra.com/api/v1/journals/193
+    uri: https://api.alegra.com/api/v1/journals/3352
     body:
       encoding: UTF-8
-      string: '{"entries":[{"id":"5009","debit":3000000},{"id":"5048","credit":4150660},{"id":"5008","debit":655000},{"id":"5010","debit":495660}]}'
+      string: '{"entries":[{"id":"5009","debit":3000000},{"id":"5039","credit":4150660},{"id":"5047","debit":655000},{"id":"5048","debit":495660}]}'
     headers:
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v2.9.0
       Content-Type:
       - application/json
       Accept:
@@ -23,27 +23,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Mar 2020 15:12:17 GMT
+      - Tue, 18 Jun 2024 16:53:13 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '1150'
       Connection:
       - keep-alive
       Server:
       - nginx
-      Set-Cookie:
-      - PHPSESSID=kp43omv90q09tru098enf7j721; expires=Sat, 05-Mar-2022 15:12:16 GMT;
-        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-cache
-      - no-store, no-cache, must-revalidate
-      Pragma:
-      - no-cache
+      Apigw-Requestid:
+      - Zko6kg91oAMEY1g=
       Vary:
       - Accept
+      Cache-Control:
+      - no-cache
       Access-Control-Max-Age:
       - '86400'
       Access-Control-Allow-Origin:
@@ -51,23 +45,22 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Headers:
-      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
-        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-2
+      - Authorization,X-Authorization,Origin,Accept,Content-Type,X-Requested-With,X-HTTP-Method-Override,X-Data-Source,X-Experiment-Onb-Variant,X-Experiment-Onb-Id,X-Request-Origin-Project,X-School-Name,X-Regime-Name,X-Sat-Register
       Access-Control-Allow-Methods:
       - DELETE
       - PUT
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '60'
       X-Rate-Limit-Remaining:
       - '149'
     body:
-      encoding: UTF-8
-      string: '{"id":"193","entries":[{"id":"5009","client":null,"name":"Salarios","description":null,"debit":3000000,"credit":0},{"id":"5048","client":null,"name":"Obligaciones
-        financieras y pr\u00e9stamos a terceros","description":null,"debit":0,"credit":4150660},{"id":"5008","client":null,"name":"Prestaciones
-        sociales","description":null,"debit":655000,"credit":0},{"id":"5010","client":null,"name":"Seguridad
-        social y parafiscales","description":null,"debit":495660,"credit":0}],"client":null,"date":"2020-03-05","observations":null,"reference":null,"status":"open","total":4150660}'
-    http_version: null
-  recorded_at: Thu, 05 Mar 2020 15:12:17 GMT
-recorded_with: VCR 5.1.0
+      encoding: ASCII-8BIT
+      string: '{"id":"3352","entries":[{"id":"5009","client":null,"name":"Salarios
+        prueba","description":null,"debit":3000000,"credit":0,"type":"category","line":null,"lineParent":null,"costCenter":null,"associatedDocument":{"idResource":null,"resourceType":null,"resource":null}},{"id":"5039","client":null,"name":"Cuentas
+        por cobrar","description":null,"debit":0,"credit":4150660,"type":"category","line":null,"lineParent":null,"costCenter":null,"associatedDocument":{"idResource":null,"resourceType":null,"resource":null}},{"id":"5047","client":null,"name":"Cuentas
+        por pagar - proveedores","description":null,"debit":655000,"credit":0,"type":"category","line":null,"lineParent":null,"costCenter":null,"associatedDocument":{"idResource":null,"resourceType":null,"resource":null}},{"id":"5048","client":null,"name":"Obligaciones
+        financieras y pr\u00e9stamos a terceros","description":null,"debit":495660,"credit":0,"type":"category","line":null,"lineParent":null,"costCenter":null,"associatedDocument":{"idResource":null,"resourceType":null,"resource":null}}],"client":null,"date":"2024-06-18","observations":null,"reference":null,"status":"open","total":4150660}'
+  recorded_at: Tue, 18 Jun 2024 16:53:13 GMT
+recorded_with: VCR 6.2.0

@@ -16,19 +16,26 @@ describe Alegra::Categories do
       VCR.use_cassette('categories') do
         categories = @client.categories.list(format: 'plain')
         expect(categories.class).to eq Array
-        expect(categories.size).to eq 91
+        expect(categories.size).to eq 93
       end
     end
 
     it 'should get a specific category' do
       VCR.use_cassette('simple_category') do
-        expected_response = { id: '5047',
-                              id_parent: '5046',
-                              name: 'Cuentas por pagar - proveedores',
-                              description: 'Bajo esta categoría se encuentran los pasivos principales',
-                              type: 'liability',
-                              read_only: false,
-                              category_rule: {id: '11', name: 'Cuentas por pagar - proveedores', key: 'DEBTS_TO_PAY_PROVIDERS'} }
+        expected_response = {:id=>"5047",
+                             :id_parent=>"5046",
+                             :name=>"Cuentas por pagar - proveedores",
+                             :text=>"Cuentas por pagar - proveedores",
+                             :code=>nil,
+                             :description=>"Bajo esta categoría se encuentran los pasivos principales",
+                             :type=>"liability",
+                             :read_only=>false,
+                             :nature=>"credit",
+                             :blocked=>"no",
+                             :status=>"active",
+                             :category_rule=>{:id=>"11", :name=>"Cuentas por pagar - proveedores", :key=>"DEBTS_TO_PAY_PROVIDERS"},
+                             :use=>"movement",
+                             :show_third_party_balance=>true}
         category = @client.categories.find('5047')
         expect(category.class).to eq Hash
         expect(category).to eq(expected_response)
