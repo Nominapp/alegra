@@ -66,5 +66,9 @@ module Alegra
     def delete(id)
       client.delete("payments/#{id}")
     end
+
+    def void(id)
+      client.post("payments/#{id}/void")
+    end
   end
 end
